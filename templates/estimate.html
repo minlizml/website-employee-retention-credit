@@ -1,0 +1,149 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minli's ERC Estimator</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index"><img src="../static/image/logo.png"></a>
+            <div class="nav-links" >  
+                <ul>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="eligibility">Eligibility</a></li>
+                    <li><a href="estimate">Estimate Your ERC</a></li>
+                    <li><a href="FAQ">FAQ</a></li>
+                    <li><a href="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Estimate ERC</h1>
+    </section>
+        
+    
+    <!------- Estimation Tables -------->
+
+    <section class="table-flex-60">
+        <div class="table-flex-row">
+            <div class="table-flex-col">
+                <h1>Let's estimate your ERC refund</h1>
+                <p>Enter some basic information to receive an estimate of your ERC for the applicable year. Use the tables to the right to estimate your 2020 and 2021 credits separately.</p>
+                <p>&nbsp;</p>
+                {% for message in get_flashed_messages() %}
+                    <div class="msg-box">
+                        <p>{{message}}</p>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="table-flex-col">
+                <div class="calc-table">
+                    <form action="calc20" method="post">
+                        <table>
+                            <tr>
+                                <th>2020 Estimator</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    On average, how many employees did you have in 2020?
+                                    <br>
+                                    <input type="text" placeholder="Employee Count" name="num_employees_input_2020">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    On average, what did you pay in monthly qualified wages in 2020?
+                                    <br>
+                                    <input type="text" placeholder="Wages + PPP Loan" name="monthly_pay_input_2020">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    What was the average health plan cost per employee per month in 2020?
+                                    <br>
+                                    <input type="text" placeholder="Health Plan Cost" name="avg_health_cost_input_2020">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br>
+                                    <input type="submit" value="CALCULATE 2020" action="calc20" class="hero-btn gre-btn">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div class="table-flex-col">
+                <div class="calc-table">
+                    <form action="calc21" method="post">
+                        <table>
+                            <tr>
+                                <th>2021 Estimator</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    On average, how many employees did you have in 2021?
+                                    <br>
+                                    <input type="text" placeholder="Employee Count" name="num_employees_input_2021">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    On average, what did you pay in monthly qualified wages in 2021?
+                                    <br>
+                                    <input type="text" placeholder="Wages + PPP Loan" name="monthly_pay_input_2021">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    What was the average health plan cost per employee per month in 2021?
+                                    <br>
+                                    <input type="text" placeholder="Health Plan Cost" name="avg_health_cost_input_2021">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br>
+                                    <input type="submit" value="CALCULATE 2021" action="calc21" class="hero-btn gre-btn">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------- footer -------->
+
+    <section class="footer">
+            <h4>About Us</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est<br>sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus.</p>
+            <div class="icons">
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <p>made with <i class="fa fa-heart-o"></i> by Easy Tutorials</p>
+    </section>    
+    
+    
+    <!----JavaScript for toggle menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script> 
+    
+</body>
+</html>    

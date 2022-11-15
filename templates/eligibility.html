@@ -1,0 +1,107 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minli's ERC Eligibility Calculator</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index"><img src="../static/image/logo.png"></a>
+            <div class="nav-links" >  
+                <ul>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="eligibility">Eligibility</a></li>
+                    <li><a href="estimate">Estimate Your ERC</a></li>
+                    <li><a href="FAQ">FAQ</a></li>
+                    <li><a href="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Check Eligibility</h1>
+    </section>
+    
+    
+    <!------- Eligibility Tables -------->
+        
+    <section class="table-flex">
+        <div class="table-flex-row">
+            <div class="table-flex-col">
+                <h1>Eligibility based on a significant decline in gross receipts</h1>
+                <p>Use the table to the right to help your company preliminarily estimate if it may have qualifying periods due to a significant decline in gross receipts during a calendar quarter. Please enter the gross receipts for each calendar quarter from 2019 through 2021. Leave the field blank for any quarter in which your business was not in operation.</p>
+                <p>Gross receipts include the total revenues your company received from all sources before subtracting any costs or expenses. Remember, if your business has more than one legal entity or is part of a controlled group or an affiliated services group, IRS aggregation rules apply to your gross receipts calculation.</p>
+            </div>
+            <div class="table-flex-col">
+                <div class="calc-table">
+                    <form action="calcElig" method="post">
+                        <table>
+                            <tr>
+                                <th>2019</th>
+                                <th>2020</th>
+                                <th>2021</th>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="Q1 Gross Receipts" name="input_2019_Q1"></td>
+                                <td><input type="text" placeholder="Q1 Gross Receipts" name="input_2020_Q1"></td>
+                                <td><input type="text" placeholder="Q1 Gross Receipts" name="input_2021_Q1"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="Q2 Gross Receipts" name="input_2019_Q2"></td>
+                                <td><input type="text" placeholder="Q2 Gross Receipts" name="input_2020_Q2"></td>
+                                <td><input type="text" placeholder="Q2 Gross Receipts" name="input_2021_Q2"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="Q3 Gross Receipts" name="input_2019_Q3"></td>
+                                <td><input type="text" placeholder="Q3 Gross Receipts" name="input_2020_Q3"></td>
+                                <td><input type="text" placeholder="Q3 Gross Receipts" name="input_2021_Q3"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="Q4 Gross Receipts" name="input_2019_Q4"></td>
+                                <td><input type="text" placeholder="Q4 Gross Receipts" name="input_2020_Q4"></td>
+                                <td><input type="text" placeholder="Q4 Gross Receipts" name="input_2021_Q4"></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {% for msg in get_flashed_messages() %}
+                                        <div class="msg-box">
+                                            <p>{{ msg }}</p>
+                                        </div>
+                                    {% endfor %}
+                                </td>
+                                <td>&nbsp;</td>
+                                <td class="calc-btn"><input type="submit" value="CALCULATE" class="hero-btn gre-btn"></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------- footer ---------->
+    <section class="footer">
+        <h4>About Me</h4>
+        <p>A self-taught future programmer in the accounting industry<br>Dreams of one day using technology to provide more convenient financial services to the public</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>made with <i class="fa fa-heart-o"></i> by MingMing</p>
+    </section>  
+
+</body>
+</html>

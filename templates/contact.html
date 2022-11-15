@@ -1,0 +1,95 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Minli</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index"><img src="../static/image/logo.png"></a>
+            <div class="nav-links" id="navLinks">  
+                <ul>
+                    <li><a href="index">Home</a></li>
+                    <li><a href="eligibility">Eligibility</a></li>                 
+                    <li><a href="estimate">Estimate Your ERC</a></li>
+                    <li><a href="FAQ">FAQ</a></li>
+                    <li><a href="contact">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>   
+        <h1>Contact Me</h1>
+    </section>
+
+
+<!------------contact me-------------->
+    <section class="contact-me">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>+86 15829385756</h5>
+                        <p>Monday to Friday <br>
+                            9:00 AM to 5:00 PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope-o"></i>
+                    <span>
+                        <h5>minlizml77@gmail.com</h5>
+                        <p>Email me with this form</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form action="contact-form-handler.php", method="post">
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <input type="email" name="email" placeholder="Enter email address" required>
+                <input type="text" name="subject" placeholder="Enter your subject" required>
+                <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                <button type="submit" class="hero-btn gre-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+<!-------- footer ---------->
+    <section class="footer">
+        <h4>About Me</h4>
+        <p>A self-taught future programmer in the accounting industry<br>Dreams of one day using technology to provide more convenient financial services to the public</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>made with <i class="fa fa-heart-o"></i> by MingMing</p>
+    </section>  
+
+
+
+
+<!----JavaScript for menu---->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+    </script> 
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../image/mainbackground.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 200px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #247431;
+    display: block;
+    margin: auto;
+    transition: .5s;    
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    width: 90%;
+    color: #fff;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 20px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.hero-btn:hover{
+    border: 1px solid #36f469a1;
+    background: #36f45679;
+}
+
+.hero-btn.gre-btn{
+    border: 1px solid #2f8920;
+    background: transparent;
+    color: #2f8920;
+}
+
+.calc-btn {
+    text-align: right;
+}
+
+.calc-table > * {
+    width: 80%;
+    margin: auto;
+    padding: 8px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.calc-table input, .calc-table textarea {
+    padding: 5px;
+    margin-bottom: 5px 0px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.calc-table table {
+    width: 60%;
+    margin: auto;
+}
+
+.calc-table th {
+    color: #298e22;
+    text-align: left;
+    padding: 8px 0px;
+}
+
+.calc-table td {
+    font-size: smaller;
+    vertical-align: middle;
+}
+
+nav .fa{
+    display: none;
+}
+
+
+@media(max-width: 700px)
+{
+   .nav-links ul li
+    {
+        display: block;
+    }
+    .nav-links
+    {
+        position: fixed;
+        background: #269251cc;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    nav .fa{
+        display: block;
+        color: rgb(255, 255, 255);
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer; 
+    }
+    .text-box h1{
+        font-size: 20px;
+    }
+    .row{
+        flex-direction: column
+    }
+    
+
+
+}
+
+
+
+/*------- Contact Page ------------*/
+
+.sub-header{
+    height: 45vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../image/mainbackground.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    margin-top: -3vh;
+}
+
+
+
+
+.table-flex {
+    width: 80%;
+    margin: auto;
+}
+.table-flex-60 {
+    width: 60%;
+    margin: auto;
+}
+
+.table-flex-row {
+    display: flex;
+}
+
+.table-flex-col {
+    flex-basis: 48%;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+.table-flex-col p, h1 {
+    padding: 8px;
+}
+
+.table-flex-col .msg-box {
+    background-color: rgba(28, 132, 35, 0.5);
+    border-radius: 5px;
+    padding: 2px;
+    text-align: center;
+    color: #333
+}
+
+.table-flex-col .msg-box p {
+    padding: 5px;
+}
+
+.table-flex-col input {
+    padding: 15px;
+    margin: 8px 8px 8px 0px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+/* ---------- Contact Page ---------- */
+
+.contact-me{
+    width: 80%;
+    margin: auto;
+
+}
+
+.contact-col{
+    flex-basis: 48%;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+.contact-col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.contact-col div .fa{
+    font-size: 28px;
+    color: #298e22;
+    margin: 10px;
+    margin-right: 30px;
+}
+    
+.contact-col p, h1{
+    padding: 8px;
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+
+
+
+/*------- FAQ Page ------------*/
+
+.FAQ-header{
+    height: 45vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../image/mainbackground.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.FAQ-header h1{
+    margin-top: -3vh;
+}
+
+
+.accordion{
+    margin:auto;
+    margin-top:30px;
+    width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: "Quicksand", sans-serif;
+    background: #269251cc;
+}
+
+.accordion_label, .accordion_content{
+    padding: 14px 20px;
+}
+
+.accordion_label{
+    display: block;
+    color:#fff;
+    font-weight: 500;
+    cursor:pointer;
+    position: relative;
+    transition: background 0.1s;
+}
+
+.accordion_label:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.accordion_label::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 12px;
+    height: 6px;
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+    background-size: contain;
+    transition: transform 0.4s;
+}
+
+.accordion_content{
+    background: #ffffff;
+    line-height: 1.6;
+    font-size: 0.85em;
+    display: none;
+}
+
+.accordion_input{
+    display:none;
+}
+  
+.accordion_input:checked ~ .accordion_content{
+    display: block;
+}
+  
+.accordion_input:checked ~ .accordion_label::after{
+    transform: translateY(-50%) rotate(0.5turn);
+}
+
+
+@media(max-width: 700px)
+
+{
+.accordion{
+    width: 450px;
+}
+
+}
+
+
+
+/*--------------Footer---------------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa{
+    color: #1c8423;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fa-heart-o{
+    color: #1c8423;
+}
